@@ -49,6 +49,35 @@ public class DrawDemo
         }
     }
 
+     /**
+     * Draw a pentagon on the screen.
+     */
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(120, 160, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for (int i=0; i<5; i++) {
+            pen.move(80);
+            pen.turn(-72);
+        }
+    }
+    
+    /**
+     * Draw a polygon on the screen with the given number of sides.
+     * @param n Number of sides for the polygon
+     */
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(200, 200, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for (int i=0; i<n; i++) {
+            pen.move(60);
+            pen.turn(-(360/n));
+        }
+    }
+    
     /**
      * Draw a wheel made of many squares.
      */
