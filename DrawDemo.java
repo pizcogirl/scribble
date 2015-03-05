@@ -79,6 +79,24 @@ public class DrawDemo
     }
     
     /**
+     * 
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(250, 200, myCanvas);
+        pen.setColor(Color.RED);
+        int size = 10;
+        
+        for (int i = 0; i < 30; i++) {
+            pen.move(size); 
+            pen.turn(90);
+            pen.move(size);
+            pen.turn(90);
+            size += 10;
+        }
+    }
+    
+    /**
      * Draw a wheel made of many squares.
      */
     public void drawWheel()
